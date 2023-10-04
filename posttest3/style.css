@@ -122,18 +122,18 @@ body {
     font-size: 90px;
     color:var(--h1);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    max-width: 2000px;
+    max-width: 500px;
     text-align: center;
 }
 
 .main p {
     margin: 20px;
     line-height: 1.5;
-    max-width: 1200px;
+    max-width: 500px;
 }
 
 .button {
-    max-width: 300px;
+    max-width: 500px;
     padding: 15px 20px;
     border-radius: 25px;
     border: 2px solid var(--green-to-purple);
