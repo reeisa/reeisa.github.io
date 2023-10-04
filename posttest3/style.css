@@ -37,8 +37,6 @@ body {
 .navbar {
     padding: 10px 30px 10px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     background-color: var(--background-color);
@@ -53,8 +51,6 @@ body {
 .navbar ul {
     list-style: none;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
 .navbar ul li {
@@ -71,7 +67,7 @@ body {
     text-decoration: underline;
 }
 
-/* dark&light */
+/* dark&light mode */
 .checkbox {
     opacity: 0;
     position: absolute;
@@ -103,7 +99,7 @@ body {
     transition: transform 0.2s linear;
 }
 
-/* main content */
+/* banner */
 .banner {
     width: 100%;
     height: 100vh;
@@ -111,7 +107,6 @@ body {
     background-size: cover;
     background-position: center;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
@@ -120,7 +115,7 @@ body {
 
 .main h1 {
     font-size: 90px;
-    color:var(--h1);
+    color: var(--h1);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     max-width: 500px;
     text-align: center;
@@ -141,6 +136,7 @@ body {
     color: white;
     text-decoration: none;
     text-align: center;
+    margin-top: 20px;
     transition: background-color 0.3s ease;
 }
 
@@ -149,14 +145,11 @@ body {
     color: var(--black-to-white);
 }
 
-
 /* line up */
 .container {
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     padding: 40px 40px;
     gap: 6rem 5rem;
     min-height: 100vh;
@@ -173,7 +166,6 @@ body {
 .card {
     position: relative;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
     width: 350px;
     height: 300px;
@@ -181,7 +173,8 @@ body {
     border-radius: 20px;
     transition: 0.5s ease;
     max-width: 90%;
-    box-shadow: 2px 2px 5px var(--green-to-purple) 
+    box-shadow: 2px 2px 5px var(--green-to-purple);
+    margin-top: 10px;
 }
 
 .card:hover {
@@ -220,7 +213,7 @@ body {
     width: 100%;
     padding: 0 10px;
     text-align: center;
-    height: 25px;
+    height: 20px;
     overflow: hidden;
     transition: 0.5s ease;
 }
@@ -233,7 +226,7 @@ body {
 .content h3{
     font-size: 18px;
     color: var(--black-to-white);
-    text-transform: lowercase;
+    text-transform: uppercase;
 }
 
 .content p {
@@ -241,8 +234,7 @@ body {
     font-size: 14px;
     color: var(--black-to-white);
     text-transform: lowercase;
-} 
-
+}
 
 /* date */
 .countdown {
@@ -304,7 +296,7 @@ body {
     font-size: 20px;
     color: var(--white-to-black);
     transition: background-color 0.3s ease; 
-    box-shadow: 2px 2px 10px var(--green-to-purple) 
+    box-shadow: 2px 2px 10px var(--green-to-purple);
 }
 
 #alert:hover {
@@ -312,8 +304,7 @@ body {
     color: var(--black-to-white);
 }
 
-
-/* about me */
+/* about */
 .profile {
     max-width: 100%;
     margin: 0 auto;
@@ -326,9 +317,8 @@ body {
     flex-direction: column;
     text-transform: lowercase;
     color: var(--black-to-white);
-    box-shadow: 2px 2px 10px var(--white-to-black) 
+    box-shadow: 2px 2px 10px var(--white-to-black);
 }
-
 
 .profile img {
     width: 150px;
@@ -393,13 +383,15 @@ ul {
     padding: 20px 0;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
+    text-align: center;
 }
 
 .col {
     width: 100%;
     max-width: 50%;
     padding: 0 15px;
+    box-sizing: border-box;
 }
 
 .col h3 {
@@ -412,7 +404,7 @@ ul {
     font-size: 16px;
     color: var(--white-to-black);
     text-decoration: none;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .col ul li a {
@@ -422,3 +414,136 @@ ul {
     display: block;
 }
 
+/* responsive styles */
+@media screen and (max-width: 768px) {
+    /* navbar */
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0 20px;
+    }
+
+    .navbar img {
+        width: 70px;
+        margin: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .label {
+        width: 50px;
+    }
+
+    .ball {
+        height: 20px;
+        width: 20px;
+    }
+
+    /* banner */
+    .main h1 {
+        font-size: 40px;
+        max-width: 100%;
+    }
+
+    .main p {
+        font-size: 10px;
+        max-width: 100%;
+    }
+
+    .button {
+        max-width: 100%;
+        font-size: 10px;
+    }
+
+    
+    /* line up */    
+    .lineup {
+        font-size: 10px;
+    }
+
+    .img {
+        width: 200px;
+    }
+    .content h3 {
+        font-size: 16px; 
+    }
+    
+    .content p {
+        margin: 5px; 
+        font-size: 12px; 
+    }
+    
+    /* countdown */
+    .countdown {
+        font-size: 20px;
+    }
+
+    .date {
+        flex-direction: column;
+        padding: 3vw;
+    }
+
+    .box {
+        padding: 10px; 
+    }
+
+    .box span {
+        font-size: 24px; 
+    }
+
+    .box p {
+        font-size: 16px; 
+    }
+
+    /* get ticket */
+    .ticket {
+        margin: 10px;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    #alert {
+        width: 150px;
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    /* about */
+    .profile {
+        padding: 20px;
+    }
+
+    .profile img {
+        width: 100%; 
+        height: 100%; 
+    }
+
+    /* footer */
+    .footer {
+        padding: 10px 0;
+    }
+
+    .col {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .col h3 {
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .col ul li {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+}
